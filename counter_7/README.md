@@ -43,3 +43,49 @@ Variabel const harus sudah diketahui value-nya saat compiling, sedangkan variabe
 Pertama, start new app "counter_7" dengan command "flutter create counter_7" lalu buka lib/main.dart. Pertama buat sebuah fungsi ganjil/genap dimana akan return String "GANJIL" saat counter ganjil, dan "GENAP" saat counter genap. Lalu pada widget text dalam body, set return fungsi ganjil/genap tadi sebagai variabel textnnya, dan set textstyle dengan warna merah jika return genap, dan cyan jika return ganjil.
 Lalu, buatlah fungsi incrementDown() dimana setiap setState() akan membuat jumlah counter berkurang satu, Namun, jika counter sudah 0, dia akan return dan tidak mengubah state counter.
 Terakhir, set floatingActionButtonLocation dengan centerFloat, lalu set padding container floatingActionButton dengan EdgeInsets.symmetric(). Untuk poin bonus, buat child widget Visibility yang didalamnya adalah child FloatingActionButton incrementDown() dan variabel visibility dimana visibility akan false (menghilangkan button) apabila counter sama dengan nol. Lalu, di luar widget Visibility, buat widget FloatingActionButton satu lagi untuk button incrementUp().
+
+
+
+
+====================================================================================================================================================================
+
+
+# Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement
+
+Navigator.pushReplacement mengreplace route yang paling current dengan mempush route baru dan membuang route lama. Navigator.push sekedar menambah route baru saja.
+
+# Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya
+
+- AppBar: 
+  Berisi toolbar dan widget-widget lainnya seperti TabBar dan FlexibleSpaceBar
+  
+- Icons: 
+  Sebuah grafik icon
+  
+- Scaffold:
+  Merupakan struktur visual layout yang dapat menunjukkan drawers, snack bars, dan bottom sheets
+  
+- Column, Row, Container:
+  Membantu dalam positioning dan sizing widgets
+  
+- Text, TextStyle:
+  Text dalam app bersama dengan stylingnya
+  
+- Floating Action Button:
+  Widget button yang "float" di atas widget lainnya dna muncul sebagai icon bulat.
+  
+# Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+
+- onPressed = Sebuah event terjadi saat user mengklik kiri sebuah button, atau menekan SPACE.
+
+- onClicked = Sebuah event terjadi saat Occurs user menekan display dengan jarinya.
+
+- onChanged = Sebuah event terjadi saat suatu value berubah.
+
+- onSaved = Sebuah event terjadi saat sebuah data (variabel, atribut, element, dll) berubah isinya.
+
+- onTap = Sama seperti onPressed, tetapi juga detect gesture.
+
+# Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+
+Navigator berkerja seperti sebuah stack, saat user pindah ke sebuah halaman, ia push page itu ke posisi top dari stack.
