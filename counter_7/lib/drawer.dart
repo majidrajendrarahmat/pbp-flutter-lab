@@ -56,7 +56,7 @@ class _DrawerClassState extends State<DrawerClass> {
           ),
           ListTile(
             leading: Icon(Icons.watch_later),
-            title: Text("My Watchlist"),
+            title: Text("My Watch List"),
             onTap: () {
               Navigator.pushReplacement(
                 context,
