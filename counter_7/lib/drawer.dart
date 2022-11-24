@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/form.dart';
+import 'package:counter_7/page/form.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/budget_data.dart';
+import 'package:counter_7/page/budget_data.dart';
+import 'package:counter_7/page/mywatchlist_page.dart';
 
 class DrawerClass extends StatefulWidget {
   DrawerClass({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class _DrawerClassState extends State<DrawerClass> {
             },
           ),
           ListTile(
-            leading: Icon(Icons.report),
+            leading: Icon(Icons.add_box),
             title: Text("Tambah Budget"),
             onTap: () {
               Navigator.pushReplacement(
@@ -44,12 +45,22 @@ class _DrawerClassState extends State<DrawerClass> {
             },
           ),
           ListTile(
-            leading: Icon(Icons.settings),
+            leading: Icon(Icons.align_horizontal_left_sharp),
             title: Text("Data Budget"),
             onTap: () {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const BudgetDataPage()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.watch_later),
+            title: Text("My Watchlist"),
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const WatchList()),
               );
             },
           ),
