@@ -129,3 +129,11 @@ Iya, dengan menggunakan json_serializable. Namun, lebih baik menggunakan models 
 
 # Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 
+- Menambahkan tombol navigasi pada drawer/hamburger untuk ke halaman mywatchlist.
+  Menambahkan list_tile Mywatchlist pada drawer.dart
+  
+- Membuat satu file dart yang berisi model mywatchlist.
+  mywatchlist.dart
+
+- Menambahkan halaman mywatchlist yang berisi semua watch list yang ada pada endpoint JSON di Django yang telah kamu deploy ke Heroku sebelumnya (Tugas 3). Pada bagian ini, kamu cukup menampilkan judul dari setiap mywatchlist yang ada.
+  
