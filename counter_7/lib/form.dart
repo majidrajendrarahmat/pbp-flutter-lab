@@ -13,12 +13,12 @@ class Data {
   static String budgeting = 'Pilih Jenis';
   static List<String> jenisBudgeting = ['Pilih Jenis','Pemasukan', 'Pengeluaran'];
 
-  static void addJudul(String t) {
-    _listJudul.add(t);
+  static void addJudul(String j) {
+    _listJudul.add(j);
   }
 
-  static void addJumlah(String a) {
-    _listJumlah.add(a);
+  static void addJumlah(String u) {
+    _listJumlah.add(u);
   }
 
   static void addBudgeting(String b) {
@@ -148,7 +148,7 @@ class _MyFormPageState extends State<MyFormPage> {
                   trailing: DropdownButton(
                     value: Data.budgeting,
                     icon: const Icon(Icons.keyboard_arrow_down),
-                    items: Data.budgeting.map((String items) {
+                    items: Data.jenisBudgeting.map((String items) {
                       return DropdownMenuItem(
                         value: items,
                         child: Text(items),
@@ -172,9 +172,9 @@ class _MyFormPageState extends State<MyFormPage> {
                     ),
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        Data.addJudul(currentData.placeholderJudul);
-                        Data.addJumlah(currentData.placeholderNominal);
-                        Data.addBudgeting(currentData.placeholderBudgeting);
+                        Data.addJudul(Data.judul);
+                        Data.addJumlah(Data.jumlah);
+                        Data.addBudgeting(Data.budgeting);
                         showDialog(
                           context: context,
                           builder: (context) {

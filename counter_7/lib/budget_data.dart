@@ -35,7 +35,7 @@ class _BudgetDataPageState extends State<BudgetDataPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(child: const Text('Data Budget')),
-                  for (int i = 0; i < indexLength; i++) ListView(
+                  for (int i = 0; i < indexBudget; i++) ListView(
                     padding: const EdgeInsets.only(top: 20, bottom: 20),
                     shrinkWrap: true,
                     children: [
