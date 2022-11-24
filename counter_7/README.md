@@ -89,3 +89,43 @@ Navigator.pushReplacement mengreplace route yang paling current dengan mempush r
 # Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
 
 Navigator berkerja seperti sebuah stack, saat user pindah ke sebuah halaman, ia push page itu ke posisi top dari stack.
+
+==================================================================================================================================================================
+
+# Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Iya, dengan menggunakan json_serializable. Namun, lebih baik menggunakan models saja jika data yang ingin diolah masih berukuran kecil.
+
+# Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+- AppBar: 
+  Berisi toolbar dan widget-widget lainnya seperti TabBar dan FlexibleSpaceBar
+  
+- Icons: 
+  Sebuah grafik icon
+  
+- Scaffold:
+  Merupakan struktur visual layout yang dapat menunjukkan drawers, snack bars, dan bottom sheets
+  
+- Column, Row, Container:
+  Membantu dalam positioning dan sizing widgets
+  
+- Text, TextStyle:
+  Text dalam app bersama dengan stylingnya
+  
+- Floating Action Button:
+  Widget button yang "float" di atas widget lainnya dna muncul sebagai icon bulat.
+  
+- FutureBuilder: 
+  Untuk mengolah data hasil konversi dari json.
+  
+# Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+
+1. Menambahkan dependensi HTTP di pubspec.yaml agar dapat melakukan HTTP request
+2. Membuat model sesuai data dari pengambilan data web
+3. Membuat HTTP request ke web service menggunakan dependency http
+4. Konversikan hasil pengambilan data menjadi models
+5. Menampilkan data yang sudah dikonversi dengan widget future builder
+
+# Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+
